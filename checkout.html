@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SHOP</title>
+    <link rel="icon" href="./images/icon.svg" type="image/svg+xml"/>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+</head>
+<body>
+    <div class="container-checkout">
+        <header>
+            <i class="fa-solid fa-bars"></i>
+            <a href="index.html"><span>S H O P</span></a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </header>
+        <div class="checkout-container">
+            <p class="checkout-head">Checkout</p>
+            <p class="checkout-desc">Shop is a demo app - form data will not be sent</p>
+            <div class="form-order">
+                <div class="desk-check1">
+                    <h5>Account Information</h5>
+                    <input placeholder="Email" class="input-style"/>
+                    <input placeholder="Phone Number" class="input-style"/>
+                    <h5 class="h5">Shipping Address</h5>
+                    <input placeholder="Address" class="input-style"/>
+                    <input placeholder="City" class="input-style"/>
+                    <div class="flexing">
+                        <input placeholder="State/Province" class="input-style"/>
+                        <input placeholder="Zip/Postal Code" class="input-style"/>
+                    </div>
+                    <div class="country">
+                        <label class="c">Country</label>
+                        <select class="input-style">
+                            <option>United States</option>
+                            <option>Canada</option>
+                        </select>
+                    </div>
+                    <h5 class="h5">Billing Address</h5>
+                    <div class="bill">
+                        <input type="checkbox" class="bill-check"/>
+                        <p>Use different billing address</p>
+                    </div>
+                </div>
+                <div class="desk-check2">
+                    <h5 class="h5">Payment Method</h5>
+                    <input placeholder="Cardholder Name" class="input-style"/>
+                    <input placeholder="Card Number" class="input-style"/>
+                    <div class="country">
+                        <label class="c">Expiry</label>
+                        <div class="flexing">
+                            <select class="input-style">
+                                <option>Jan</option>
+                                <option>Feb</option>
+                                <option>Mar</option>
+                                <option>Apr</option>
+                                <option>May</option>
+                                <option>Jun</option>
+                                <option>Jul</option>
+                                <option>Aug</option>
+                                <option>Sep</option>
+                                <option>Oct</option>
+                                <option>Nov</option>
+                                <option>Dec</option>
+                            </select>
+                            <select class="input-style">
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                                <option>2026</option>
+                            </select>
+                            <input placeholder="CVV" class="input-style"/>
+                        </div>
+                    </div>
+                    <h5 class="h5">Order Summary</h5><br>
+                    <p class="orders"><span>Grey Heather Fleece Zip Hoodie</span><span>&dollar;38.85</span></p>
+                    <p class="orders"><span>Eco-Jersey Chrome Zip Up Hoodie</span><span>&dollar;37.75</span></p>
+                    <p class="orders"><span>Anvil L/S Crew Neck - Grey</span><span>&dollar;22.15</span></p>
+                    <p class="orders"><span>Green Flex Fleece Zip Hoodie</span><span>&dollar;45.65</span></p>
+                    <p class="orders"><span>Jacquard-Knit Full-Zip Fleece</span><span>&dollar;74.90</span></p><br>
+                    <p class="orders"><span>Total</span><span>&dollar;219.30</span></p>
+                    <button class="order-btn-desk">PLACE ORDER</button>
+                </div>
+            </div>
+             <footer class="foot">
+                <a class="copyright">Made by Polymer</a><br>
+                <button>DEMO ONLY</button>
+            </footer>
+        </div>
+    </div>
+    <button class="order-btn">PLACE ORDER</button>
+</body>
+</html>
