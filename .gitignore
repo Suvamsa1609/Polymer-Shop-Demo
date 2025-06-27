@@ -1,0 +1,19 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Node (in case you add npm tooling later)
+node_modules/
+
+# Build output (if added later)
+dist/
+build/
+
+# Optional: OS-based
+*.swp
