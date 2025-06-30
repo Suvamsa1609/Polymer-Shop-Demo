@@ -11,8 +11,8 @@
 </head>
 </head>
 <body>
-    <div class="container-checkout">
-        <header>
+    <div class="container">
+        <header class="check-header">
             <i class="fa-solid fa-bars"></i>
             <a href="index.html"><span>S H O P</span></a>
             <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -23,18 +23,36 @@
             <div class="form-order">
                 <div class="desk-check1">
                     <h5>Account Information</h5>
-                    <input placeholder="Email" class="input-style"/>
-                    <input placeholder="Phone Number" class="input-style"/>
-                    <h5 class="h5">Shipping Address</h5>
-                    <input placeholder="Address" class="input-style"/>
-                    <input placeholder="City" class="input-style"/>
-                    <div class="flexing">
-                        <input placeholder="State/Province" class="input-style"/>
-                        <input placeholder="Zip/Postal Code" class="input-style"/>
+                    <div class="input-style">
+                        <label>Email</label>
+                        <input/>
                     </div>
-                    <div class="country">
-                        <label class="c">Country</label>
-                        <select class="input-style">
+                    <div class="input-style">
+                        <label>Phone Number</label>
+                        <input/>
+                    </div>
+                    <h5 class="h5">Shipping Address</h5>
+                    <div class="input-style">
+                        <label>Address</label>
+                        <input/>
+                    </div>
+                    <div class="input-style">
+                        <label>City</label>
+                        <input/>
+                    </div>
+                    <div class="flexing">
+                        <div class="input-style inp">
+                            <label>State/Province</label>
+                            <input/>
+                        </div>
+                        <div class="input-style inp">
+                            <label>Zip/Postal Code</label>
+                            <input/>
+                        </div>
+                    </div>
+                    <div class="selection">
+                        <label>Country</label><br>
+                        <select class="select">
                             <option>United States</option>
                             <option>Canada</option>
                         </select>
@@ -47,12 +65,18 @@
                 </div>
                 <div class="desk-check2">
                     <h5 class="h5">Payment Method</h5>
-                    <input placeholder="Cardholder Name" class="input-style"/>
-                    <input placeholder="Card Number" class="input-style"/>
-                    <div class="country">
-                        <label class="c">Expiry</label>
+                    <div class="input-style">
+                        <label>Cardholder Name</label>
+                        <input/>
+                    </div>
+                    <div class="input-style">
+                        <label>Card Number</label>
+                        <input/>
+                    </div>
+                    <div class="selection">
+                        <label>Expiry</label>
                         <div class="flexing">
-                            <select class="input-style">
+                            <select class="select-inp1">
                                 <option>Jan</option>
                                 <option>Feb</option>
                                 <option>Mar</option>
@@ -66,7 +90,7 @@
                                 <option>Nov</option>
                                 <option>Dec</option>
                             </select>
-                            <select class="input-style">
+                            <select class="select-inp1">
                                 <option>2016</option>
                                 <option>2017</option>
                                 <option>2018</option>
@@ -79,25 +103,22 @@
                                 <option>2025</option>
                                 <option>2026</option>
                             </select>
-                            <input placeholder="CVV" class="input-style"/>
+                            <input type="text" class="select-inp1" placeholder="CVV" />
                         </div>
                     </div>
-                    <h5 class="h5">Order Summary</h5><br>
+                    <h5>Order Summary</h5>
                     <p class="orders"><span>Grey Heather Fleece Zip Hoodie</span><span>&dollar;38.85</span></p>
-                    <p class="orders"><span>Eco-Jersey Chrome Zip Up Hoodie</span><span>&dollar;37.75</span></p>
-                    <p class="orders"><span>Anvil L/S Crew Neck - Grey</span><span>&dollar;22.15</span></p>
-                    <p class="orders"><span>Green Flex Fleece Zip Hoodie</span><span>&dollar;45.65</span></p>
-                    <p class="orders"><span>Jacquard-Knit Full-Zip Fleece</span><span>&dollar;74.90</span></p><br>
-                    <p class="orders"><span>Total</span><span>&dollar;219.30</span></p>
+                    <p class="orders"><span>Android Nylon Packable Jacket</span><span>&dollar;33.60</span></p><br>
+                    <p class="orders"><span>Total</span><span>&dollar;72.45</span></p>
                     <button class="order-btn-desk">PLACE ORDER</button>
                 </div>
             </div>
-             <footer class="foot">
-                <a class="copyright">Made by Polymer</a><br>
-                <button>DEMO ONLY</button>
-            </footer>
         </div>
     </div>
+    <footer>
+        <a>Made by Polymer</a><br>
+        <button>DEMO ONLY</button>
+    </footer>
     <button class="order-btn">PLACE ORDER</button>
 </body>
 </html>
