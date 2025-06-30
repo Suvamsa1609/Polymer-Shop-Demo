@@ -1,196 +1,219 @@
-/* .hamburger {
-    cursor: pointer;
-    display: inline-block;
+body {
+    overflow-x: hidden;
+    text-align: center;
+    height: 100vh;
 }
-.hamburger span {
-    display: block;
-    background-color: black;
-    width: 1rem;
-    height: 2px;
-    margin: 2px 0;
-} */
-/*Home*/
 .container {
     text-align: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
+
 /*header*/
 header {
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px;
     font-weight: bold;
+    font-size: medium;
 }
 header i, header span {
+    white-space: nowrap;
     cursor: pointer;
+    padding: 0 25px;
+}
+a {
+    color: black;
+    text-decoration: none;
 }
 /*header end*/
 
-/*navbar*/
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.bg {
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-}
-.home-shop {
-    margin: 20px 0px;
-}
-.men-wear button, .women-wear button, .men-shirt button, .women-shirt button {
-    height: 40px;
-    width: 165px;
-    border: 2px solid black;
-    background: none;
-    margin-bottom: 35px;
-    cursor: pointer;
-}
-.men-wear .bg {
-    background-image: url("./images/mens_outerwear.jpg");
-}
-.women-wear .bg {
-    background-image: url("./images/ladies_outerwear.jpg");
-}
-.tShirts {
-    display: flex;
-    font-size: 0.9rem;
-}
-.men-shirt .bg {
-    background-image: url("./images/mens_tshirts.jpg");
-}
-.women-shirt .bg {
-    background-image: url("./images/ladies_tshirts.jpg"); 
-}
-.tShirts button{
-    width: 130px;
-}
-.men-shirt, .women-shirt {
-    width: 50%;
-}
 
 /*footer*/
+footer {
+    height: 68px;
+    margin-top: 2.3rem;
+    position: relative;
+}
 footer button {
-    height: 40px;
+    height: 36px;
     width: 120px;
     background: black;
     color: white;
     border: none;
-    margin-top: 10px;
-    align-self: center;
     cursor: text;
+    opacity: 0.9;
+    margin: auto;
+    margin-top: 0.3rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
-footer a, .item-no {
-    margin-top: 5px;
+footer a{
     color: grey;
-    font-size: 12px;
-}
+    font-size: 0.83rem;
+}   
 footer a:hover {
     text-decoration: underline;
-}
-.copyright {
     cursor: pointer;
 }
 /*Footer End*/
 
 
 
+/*home*/
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.wear {
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+}
+.home-img {
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.home-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.home-tag {
+    height: 25px;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 24px 0px;
+    display: block;
+}
+.shop-button {
+    height: 41px;
+    width: 169px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.wear-tshirt {
+    height: 350px;
+    display: flex;
+}
+.tshirt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.shirt {
+    font-size: 0.9rem;
+    height: 21px;
+}
+.shop-button-t {
+    height: 41px;
+    width: 129px;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+}
 /*Home End*/
 
 
 
 
 /*Items Start*/
-.item-name {
-    font-size: smaller;
+.header-desc {
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.men-items {
-    margin: 20px;
-    cursor: pointer;
+.item-name-h {
+    font-size: 14px;
+    margin-bottom: 0.4rem;
 }
+.item-no {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
 .items-lists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 25px;
-    gap: 1.5rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    list-style-type: none;
 }
 .item-card {
-    display: flex;
-    flex-direction: column;
+    margin: 0.8rem;
+    padding-top: 1rem;
 }
-.item-card img {
-    height: 150px;
+.item-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
-.item-card > p:first-of-type {
-    margin-top: 10px;
-    font-size: 13px;
+.item-name {
     font-weight: bold;
+    font-size: 13px;
+    margin-top: 10px;
 }
-.items-mobile .visit {
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-color: rgb(24, 24, 97);
-    text-decoration-thickness: 2px;
+.item-cost {
+    font-size: 0.8rem;
+    opacity: 0.6;
 }
 /*Item End*/
 
 
 
 /*Single-Item Start*/
-.single .item-img {
-    background-image: url("images/men1.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 300px;
+
+.item-single {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .single {
-    margin: 0;
-    padding: 0;
     width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.single img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.more {
+    margin: 16px 0px;
+    padding: 0px 24px;
+    text-align: start;
+}
+.item-title{
+    font-size: 20px;
+}
+.price {
+    font-size: 13px;
+    margin: 12px 0px 32px;
+    opacity: 0.6;
 }
 .cart-btn, .order-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
+    height: 64px;
     width: 100%;
+    border: none;
     position: fixed;
+    left: 0;
     bottom: 0;
-    background: rgb(24, 24, 97);
-    color: white;
+    background: #172c50;
+    color: #FFFFFF;
     font-size: 15px;
     z-index: 1;
-    margin: 0;
-    padding: 0;
-}
-.item-title {
-    text-align: left;
-    margin: 20px;
-    font-size: larger;
-}
-.description {
-    text-align: left;
-    margin: 20px;
-    color: gray;
-    font-size: 13px;
-}
-.desc {
-    text-align: left;
-    margin: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-dt {
-    margin: 20px 0px;
-}
-ul {
-    margin-left: 45px;
-    margin-bottom: 55px;
 }
 .choices{
     display: flex;
@@ -198,14 +221,13 @@ ul {
     background: none;
 }
 .choices hr {
-    margin: 0px 20px;
-    opacity: 0.2;
+    opacity: 0.7;
 }
 .choice.size, .choice.quant {
     display: flex;
     flex-direction: row;
     height: 50px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     text-align: center;
     gap: 3rem;
 }
@@ -229,6 +251,19 @@ ul {
     width: 100%;
     border: none;
     background: none;
+}
+.desc {
+    margin: 18px 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.description{
+    font-size: 13px;
+    opacity: 0.7;
+}
+.feature-item {
+    margin: 13px 0px;
+    padding: 0px 0px 0px 40px;
 }
 /*Single-Item End*/
 
@@ -372,107 +407,158 @@ ul {
 .header-desc {
     cursor: text;
 }
+/* checkout end*/
 
 
 
 
 
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1440px) {
+
+    /*header & footer*/
     .fa-bars{
         visibility: hidden;
     }
+    .header {
+        height: 70px;
+    }
     nav {
+        height: 66px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: center;
+        gap: 2rem;
         font-size: small;
-        margin: 20px;
     }
     nav a{
+        color: black;
+        text-decoration: none;
         cursor: pointer;
-        margin: 10px 20px;
     }
-    .bg {
+    footer {
+        height: 68px;
+    }
+    /*header & footer end*/
+
+
+    /*home*/
+    .home-container {
+        gap: 2.5rem;
+    }
+    .home-tag {
+        margin: 24px 0px;
+        display: block;
+    }
+    .wear {
+        height: 450px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .home-img, .home-img-item {
         height: 320px;
     }
-    .home-shop {
-        margin: 30px;
+    .home-tag {
+        height: 25px;
+        font-size: 17px;
     }
-    .men-wear button, .women-wear button, .men-shirt button, .women-shirt button {
-        width: 160px;
-        margin-bottom: 30px;
+    .shop-button {
+        font-size: 14px;
     }
-    .men-wear .bg {
-        cursor: default;
+    .wear-tshirt {
+        height: 446px;
     }
+    .tshirt {
+        display: flex;
+        justify-content: space-between;
+    }
+    .shirt {
+        font-size: 14.3px;
+    }
+    .shop-button-t {
+        height: 41px;
+        width: 170px;
+        font-size: 14px;
+    }
+
+
 
     /*items*/
     .items-lists {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem 4rem;
     }
-    .men-items {
-        margin: 40px;
-        cursor: pointer;
+    .item-card {
+        margin: 0 48px;
+        padding: 10px;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
     }
-    .item-card img {
-        height: 300px;
-        margin: 0px 25px;
+    .item-img {
+        padding-bottom: 1rem;
     }
-    .item-name {
-        font-size: medium;
+    .home-img {
+        margin-bottom: 1.5rem;
     }
-    .item-card > p:first-of-type {
-        margin-top: 40px;
-        font-size: 13px;
-        font-weight: bold;
+    .home-img-item {
+        margin-bottom: 1.5rem;
     }
+    .header-desc {
+        height: 50px;
+    }
+    .item-name-h {
+        font-size: 17px;
+        margin-bottom: 1px;
+        height: 25.5px;
+    }
+    .visit {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: rgb(24, 24, 97);
+        text-decoration-thickness: 2px;
+    }
+    .men-cursor {
+        cursor: default;
+    }
+
+
+    /*Single-Item*/
+
     .item-single {
         display: flex;
-        padding-right: 100px;
-        margin: 10px 0px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .cart-btn {
+        display: none;
     }
     .single, .more {
         width: 50%;
-        margin-top: 50px;
+        margin: 64px 32px;
     }
-    .single .item-img {
-        background-image: url("images/men1.jpg");
-        background-repeat: no-repeat;
-        /* background-size: cover; */
-        background-position: center;
-        object-fit: contain;
-        height: 450px;
+    .item-title{
+        font-size: 24px;
     }
-    .single {
-        margin-top: 70px;
-        width: 70%;
+    .price {
+        font-size: 16px;
+        margin: 12px 0px 32px;
+        opacity: 0.6;
     }
-    .item-title > p {
-        font-size: larger;
+    .more {
+        opacity: 0.75;
     }
-    .item-title .item-no {
-        font-size: medium;
-    }
-    .description {
-        font-size: 13px;
-        margin-bottom: 0px;
-    }
-    .cart-btn {
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        width: 180px;
-        border: 2px solid black;
-        position: relative;
-        left: 20px;
-        top: -25px;
-        bottom: 250px;
+    .cart-btn-desktop {
+        width: 186px;
+        height: 36px;
+        font-size: 14px;
         background: none;
-        color: black;
+        border: 1px solid black;
+        margin-top: 10px;
+        opacity: 1;
     }
+
+
+
 
 
     /*cart*/
@@ -548,17 +634,17 @@ ul {
 }
 
 
-@media (max-width: 768px) {
-    .items-mobile {
+@media (max-width: 767px) {
+    nav {
         display: none;
     }
-    nav {
+    .home-img-item {
         display: none;
     }
     .order-btn-desk {
         display: none;
     }
-    .cart-btn-desk {
+    .cart-btn-desktop {
         display: none;
     }
 }
