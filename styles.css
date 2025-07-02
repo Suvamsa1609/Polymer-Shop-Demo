@@ -1,14 +1,16 @@
-body {
-    overflow-x: hidden;
-    text-align: center;
-    height: 100vh;
+html, body {
+    height: 100%;
+    color: #202020;
 }
 .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     text-align: center;
-    width: 100%;
-    /* height: 100vh; */
-    max-width: 1440px;
-    margin: 0 auto;
+    overflow-x: hidden;
+}
+main {
+    flex: 1;
 }
 
 /*header*/
@@ -19,14 +21,20 @@ header {
     justify-content: space-between;
     font-weight: bold;
     font-size: medium;
+    padding: 0px 18px;
 }
-header i, header span {
-    white-space: nowrap;
+header i {
+    padding: 8px;
     cursor: pointer;
-    padding: 0 25px;
+}
+header span {
+    display: inline-block;
+    vertical-align: bottom;
+    padding-top: 8px;
+    cursor: pointer;
 }
 a {
-    color: black;
+    color: #202020;
     text-decoration: none;
 }
 /*header end*/
@@ -35,8 +43,7 @@ a {
 /*footer*/
 footer {
     height: 68px;
-    margin-top: 2.3rem;
-    position: relative;
+    margin: 36px 0px 0px;
 }
 footer button {
     height: 36px;
@@ -46,16 +53,12 @@ footer button {
     border: none;
     cursor: text;
     opacity: 0.9;
-    margin: auto;
-    margin-top: 0.3rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    margin: 8px auto 0px;
+    font-size: 13px;
 }
-footer a{
+footer a {
     color: grey;
-    font-size: 0.83rem;
+    font-size: 13px;
 }   
 footer a:hover {
     text-decoration: underline;
@@ -69,12 +72,13 @@ footer a:hover {
 .home-container {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    color: #202020;
 }
 .wear {
-    height: 355px;
+    height: 354px;
     display: flex;
     flex-direction: column;
+    margin: 0px 0px 40px;
 }
 .home-img {
     height: 240px;
@@ -91,14 +95,14 @@ footer a:hover {
 }
 .home-tag {
     height: 25px;
-    font-size: 17px;
+    font-size: 16.9px;
     font-weight: lighter;
     margin: 24px 0px;
     display: block;
 }
-.shop-button {
+.shop-button, .shop-button-t {
     height: 41px;
-    width: 169px;
+    width: 169.5px;
     border: 2px solid black;
     background: none;
     cursor: pointer;
@@ -114,15 +118,11 @@ footer a:hover {
     flex-direction: column;
 }
 .shirt {
-    font-size: 0.9rem;
+    font-size: 14.3px;
     height: 21px;
 }
 .shop-button-t {
-    height: 41px;
-    width: 129px;
-    border: 2px solid black;
-    background: none;
-    cursor: pointer;
+    width: 129.5px;
 }
 /*Home End*/
 
@@ -131,44 +131,51 @@ footer a:hover {
 
 /*Items Start*/
 .header-desc {
-    height: 45px;
+    height: 44.94px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .item-name-h {
-    font-size: 14px;
-    margin-bottom: 0.4rem;
+    font-size: 14.3px;
+    margin-bottom: 4px;
 }
 .item-no {
     font-size: 12px;
-    opacity: 0.6;
+    color: #757575;
 }
-
 .items-lists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 0.5rem;
+    padding: 0px 10px;
     width: 100%;
     list-style-type: none;
 }
 .item-card {
-    margin: 0.8rem;
-    padding-top: 1rem;
+    margin: 0px 12px;
+}
+.shop-list-item {
+    display: flex;
+    flex-direction: column;
+}
+.shop-list-img {
+    margin: 2rem 0rem 1rem;
 }
 .item-img {
     width: 100%;
-    height: auto;
     object-fit: contain;
+    display: block;
 }
 .item-name {
     font-weight: bold;
     font-size: 13px;
-    margin-top: 10px;
 }
 .item-cost {
-    font-size: 0.8rem;
+    font-size: 13px;
     opacity: 0.6;
+}
+.foot {
+    margin: 28px 0px 0px;
 }
 /*Item End*/
 
@@ -182,8 +189,8 @@ footer a:hover {
     flex-direction: column;
 }
 .single {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    width: 80%;
+    margin: auto;
 }
 .single img {
     width: 100%;
@@ -192,7 +199,7 @@ footer a:hover {
     display: block;
 }
 .more {
-    margin: 16px 0px;
+    margin: 29.2px 0px 28px;
     padding: 0px 24px;
     text-align: start;
 }
@@ -201,7 +208,7 @@ footer a:hover {
 }
 .price {
     font-size: 13px;
-    margin: 12px 0px 32px;
+    margin: 9px 0px 32px;
     opacity: 0.6;
 }
 .cart-btn, .order-btn {
@@ -211,7 +218,7 @@ footer a:hover {
     position: fixed;
     left: 0;
     bottom: 0;
-    background: #172c50;
+    background-color: #172c50;
     color: #FFFFFF;
     font-size: 15px;
     z-index: 1;
@@ -222,49 +229,53 @@ footer a:hover {
     background: none;
 }
 .choices hr {
-    opacity: 0.7;
+    opacity: 0.4;
 }
-.choice.size, .choice.quant {
+.choice {
     display: flex;
-    flex-direction: row;
-    height: 50px;
-    padding: 10px 0px;
-    text-align: center;
-    gap: 3rem;
-}
-.choice.quant {
-    gap: 1.2rem;
+    height: 48px;
+    align-items: center;
+    justify-content: flex-start;
 }
 .choice option, .choice select{
     font-size: medium;
 }
-.choice .quant {
-    gap: 5rem;
-}
-.item-title .item-no, .choice .item-no {
-    font-size: 13px;
-}
-.item-title .item-no {
-    margin-top: 15px;
-    margin-bottom: 30px;
+.items-no {
+    font-size: 12.5px;
+    opacity: 0.7;
 }
 .choice select {
     width: 100%;
     border: none;
     background: none;
 }
-.desc {
-    margin: 18px 0px;
+.size select {
+    padding-left: 41px;
+    margin-right: 7px;
+}
+.quant select {
+    padding-left: 18.5px;
+    margin-right: 7px;
+}
+.description {
+    margin: 32px 0px;
+    font-size: 13px;
+}
+.description p, .description ul, .description dl {
+    opacity: 0.7;
+}
+#desc {
+    margin: 16px 0px;
     font-size: 13px;
     font-weight: bold;
-}
-.description{
-    font-size: 13px;
-    opacity: 0.7;
+    color: #202020;
 }
 .feature-item {
     margin: 13px 0px;
     padding: 0px 0px 0px 40px;
+}
+.foot-single {
+    margin: 0px;
 }
 /*Single-Item End*/
 
@@ -272,56 +283,69 @@ footer a:hover {
 
 /*Cart-start*/
 
-.cart-head {
-    margin-bottom: 50px;
-}
 .cart-head p {
-    font-size: 14px;
+    font-size: 14.3px;
+}
+.cart {
+    padding: 0px 24px 48px;
+}
+.cart-list {
+    margin: 40px 0px;
 }
 .cart-img {
-    height: 75px;
-    width: 75px;
+    height: 72px;
+    width: 72px;
 }
 .cart-item {
     display: flex;
     justify-content: flex-start;
-    margin: 20px;
     align-content: flex-start;
+    margin-bottom: 24px;
+    position: relative;
 }
-.top-info {
+.cart-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items: flex-start; */
-    row-gap: 1rem;
+    margin-left: 10px;
+    text-align: start;
+    
 }
 .cart-name {
     font-size: 13px;
-    max-width: 180px; 
+    max-width: 150px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.bottom-info {
+.item-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     font-size: 13px;
-    opacity: 0.6;
-    gap: 5px;
+    color: #757575;
+    margin-right: 10px;
+    padding-top: 8px;
+    line-height: 20px;
+    position: relative;
 }
 .cart-qty select {
     border: none;
-    padding: 0px 10px;
-}
-.cart-qty option {
+    background: none;
+    padding-left: 9px;
     font-size: medium;
 }
 .cart-size span{
     padding: 0px 10px;
 }
 .cross-mark {
-    padding: 0 1rem;
-    opacity: 0.6;
+    padding: 8px;
+    font-size: medium;
+    position: absolute;
+    right: -47px;
+    top: -25px;
 }
 .cart-btn-check, .cart-btn-desk {
+    z-index: 1;
     cursor: pointer;
 }
 .total {
@@ -329,8 +353,10 @@ footer a:hover {
     justify-content: flex-end;
     font-weight: bold;
     font-size: small;
-    opacity: 0.8;
-    padding-right: 1rem;
+    margin-right: 10px;
+}
+.total span {
+    margin-left: 28px;
 }
 /*Cart-end*/
 
@@ -355,23 +381,25 @@ footer a:hover {
 .input-style {
     display: flex;
     flex-direction: column;
-    height: 75px;
+    height: 74px;
     width: 100%;
     font-size: 16px;
     background: none;
-    opacity: 0.4;
+    opacity: 0.5;
     justify-content: flex-end;
 }
 .input-style label {
-    padding: 8px 0px;
+    padding-top: 8px;
+    padding-bottom: 6px;
 }
 .input-style input {
     border: none;
     border-top: 1px solid grey;
+    padding-bottom: 1px;
 }
 .form-order h5 {
-    margin: 10.5px 0px;
-    opacity: 0.9;
+    margin-top: 12.5px;
+    margin-bottom: 10.7px;
     font-size: 13px;
 }
 .flexing {
@@ -395,14 +423,14 @@ footer a:hover {
 .bill-check {
     height: 18px;
     width: 18px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 15%;
 }
 .orders {
     display: flex;
     font-size: 13px;
     justify-content: space-between;
-    opacity: 0.9;
+    line-height: 24px;
 }
 .header-desc {
     cursor: text;
@@ -415,7 +443,7 @@ footer a:hover {
     font-size: 13px;
 }
 .select {
-    margin: 8px 24px 8px 0px;
+    padding: 4px 24px 8px 0px;
     width: 100%;
     border: none;
     background: none;
@@ -423,12 +451,22 @@ footer a:hover {
 }
 .select-inp1 {
     flex: 1;
-    padding: 8px 24px 8px 0px;
+    min-width: 0;
+    padding: 4px 24px 8px 0px;
     border: none;
     background: none;
     font-size: 16px;
 }
-
+.select, .select-inp1 {
+    border-bottom: 1px solid #cacaca;
+    text-align: start;
+}
+.space {
+    height: 90px;
+}
+.t {
+    padding-top: 5px;
+}
 /* checkout end*/
 
 
@@ -442,48 +480,34 @@ footer a:hover {
     .fa-bars{
         visibility: hidden;
     }
-    .header {
-        height: 70px;
-    }
     nav {
         height: 66px;
         display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
         font-size: small;
     }
     nav a{
-        color: black;
-        text-decoration: none;
         cursor: pointer;
-    }
-    footer {
-        height: 68px;
+        padding: 9px 5px;
     }
     /*header & footer end*/
 
 
     /*home*/
-    .home-container {
-        gap: 2.5rem;
-    }
-    .home-tag {
-        margin: 24px 0px;
-        display: block;
-    }
     .wear {
         height: 450px;
         display: flex;
         justify-content: space-between;
+        margin: 0px 0px 40px;
     }
     .home-img, .home-img-item {
         height: 320px;
     }
     .home-tag {
-        height: 25px;
         font-size: 17px;
+        margin: 32px 0px;
     }
     .shop-button {
         font-size: 14px;
@@ -503,45 +527,49 @@ footer a:hover {
         width: 170px;
         font-size: 14px;
     }
+    /*home-end*/
 
 
 
     /*items*/
+    .home-img-item {
+        margin-bottom: 1.8rem;
+    }
     .items-lists {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .item-card {
-        margin: 0 48px;
-        padding: 10px;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-    }
-    .item-img {
-        padding-bottom: 1rem;
-    }
-    .home-img {
-        margin-bottom: 1.5rem;
-    }
-    .home-img-item {
-        margin-bottom: 1.5rem;
     }
     .header-desc {
         height: 50px;
     }
     .item-name-h {
-        font-size: 17px;
-        margin-bottom: 1px;
-        height: 25.5px;
+        font-size: 16.9px;
+        margin-bottom: 4.1px;
+        height: 25.36px;
     }
     .visit {
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        text-decoration-color: rgb(24, 24, 97);
-        text-decoration-thickness: 2px;
+        display: inline-block;
+        border-bottom: 0.15rem solid rgb(17, 17, 68);
+        padding-bottom: 8px;
     }
     .men-cursor {
         cursor: default;
     }
+    .home-img:active {
+        outline: 2px solid black;
+        outline-offset: -6px;
+        border-radius: 8px;
+    }
+    .item-card {
+        margin: 0px 49.68px;
+    }
+    /* .shop-list-item {
+        margin: 0px 37.68px;
+    }*/
+    .shop-list-img {
+        padding: 0px 10px 20px 10px;
+    }
+
+
 
 
     /*Single-Item*/
@@ -549,33 +577,43 @@ footer a:hover {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        justify-content: flex-start;
+        width: 88%;
+        margin: auto;
+    }
+    .single {
+        width: 60%;
+        margin: 64px 32px 54px;
+        padding-left: 1.5px;
+    }
+    .more {
+        width: 40%;
+        padding: 0px;
+        padding-top: -15px;
+        margin: 60px 32px 54px;
+    }
+    .item-img-single {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     .cart-btn {
         display: none;
-    }
-    .single, .more {
-        width: 50%;
-        margin: 64px 32px;
     }
     .item-title{
         font-size: 24px;
     }
     .price {
         font-size: 16px;
-        margin: 12px 0px 32px;
-        opacity: 0.6;
-    }
-    .more {
-        opacity: 0.75;
+        margin: 12px 0px 40px;
     }
     .cart-btn-desktop {
         width: 186px;
         height: 36px;
         font-size: 14px;
         background: none;
-        border: 1px solid black;
-        margin-top: 10px;
-        opacity: 1;
+        border: 2px solid black;
+        margin-top: 19px;
     }
 
 
@@ -584,52 +622,79 @@ footer a:hover {
 
     /*cart-page*/
     .cart {
-        padding-left: 100px;
-        height: 100vh;
+        min-height: 100vh;
+        margin: 0px auto;
+        padding-right: 75px;
     }
     .cart-head {
-        margin-top: 64px;
+        padding-top: 66px;
     }
     .cart-head p {
-        font-size: 18px;
+        font-size: 16.9px;
     }
-    .cart-item {
-        display: flex;
-        column-gap: 1rem;
-        padding-left: 40px;
-    }
-    .top-info {
-        display: flex;
+    .cart-info {
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        gap: 12rem;
-    }
-    .bottom-info {
-        display: flex;
-        flex-direction: row;
+        column-gap: 10rem;
         justify-content: space-between;
-        gap: 6.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    .item-info {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 5rem;
+        padding: 0;
+        margin: 0;
+    }
+    .cart-name {
+        max-width: none;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        margin: 0px 30px 0px 20px;
+    }
+    .cart-price {
+        margin-right: 3rem;
     }
     .cross-mark {
-        display: flex;
-        align-items: center;
+        position: absolute;
+        top: -7px;
+    }
+    .extra {
+        margin-left: 8px;
     }
     .total {
+        display: none;
+    }
+    .total-desk span {
+        margin-left: 25px;
+        margin-right: 20px;
+    }
+    .total-desk {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: small;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 0.3rem;
         position: absolute;
-        right: 320px;
+        right: 200px;
     }
     .cart-btn-desk {
         height: 40px;
-        width: 180px;
+        width: 170px;
         border: 2px solid black;
         background: none;
         color: black;
-        position: relative;
-        left: 100px;
         cursor: pointer;
+        margin-left: 45px;
     };
-
+    .cart-item {
+        margin-bottom: 0px;
+    }
     .cart-btn-check {
         display: none;
     }
@@ -639,33 +704,49 @@ footer a:hover {
 
     /*checkout*/
     .checkout-container {
-        padding: 64px 0px 64px;
+        margin: 0px 38px;
+        padding-top: 66px;
+        width: 73.8%;
+        margin: auto;
+        padding-bottom: 10px;
     }
     .form-order {
-        margin: 40px 0px 0px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 5rem;
+        margin-top: 40px;
+    }
+    .desk-check1, .desk-check2 {
+        width: 50%;
+    }
+    .desk-check2 {
+        margin-left: 80px;
     }
     .checkout-head {
-        font-size: 16px;
+        font-size: 16.9px;
     }
     .order-btn {
         display: none;
     }
     .order-btn-desk {
-        margin-top: 20px;
-        height: 40px;
-        width: 180px;
+        margin-top: 25px;
+        height: 36px;
+        width: 192px;
         border: 2px solid black;
         background: none;
         color: black;
+        font-size: 14px;
+    }
+    .select, .select-inp1 {
+        padding-top: 5px;
     }
 }
 
 
 @media (max-width: 767px) {
+    .total-desk {
+        display: none;
+    }
     nav {
         display: none;
     }
